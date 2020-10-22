@@ -5,20 +5,30 @@ import covidBrLogo from '../assets/images/covidbr-logo.svg';
 import Stats, { StatsProps } from '../components/Stats';
 
 import api from '../services/api'
+import StatsBrazil, { StatsBrazilProps } from '../components/StatsBrazil';
 
 
 function Home() {
-  const [local, setLocal] = useState<string>('uf/sp')
+  const [local, setLocal] = useState<string>('/brazil')
   const [localData, setLocalData] = useState<StatsProps>()
-
+  const [country, setCountry] = useState<StatsBrazilProps>();
+  
   function handleMapSelect(value: string) {
+    if (value !== '/brazil') {
+      value = '/brazil/' + value
+    }
     setLocal(value)
   }
   
   useEffect(() => {
     api.get(`${local}`).then(response => {
-      setLocalData(response.data)
-      console.log(response.data)
+      if (local === '/brazil') {
+        setCountry(response.data.data)
+        console.log(country)
+      }
+      else {
+        setLocalData(response.data)
+      }
     })
   }, [local])
 
@@ -26,16 +36,28 @@ function Home() {
     <div id="main">
       <div className="content-main">
         <img src={covidBrLogo} alt="CovidBR" className="logo"/>
-        <Stats
-          state = {localData?.state}        
-          cases = {localData?.cases}        
-          deaths = {localData?.deaths}        
-          refuses = {localData?.refuses}        
-          suspects = {localData?.suspects}        
-        />
+        {(local === '/brazil') ? (
+            <StatsBrazil
+              country = {country?.country}        
+              cases = {country?.cases}        
+              deaths = {country?.deaths}        
+              recovered = {country?.recovered}        
+              confirmed = {country?.confirmed} 
+            />
+          ) : (
+            <Stats
+              state = {localData?.state}        
+              cases = {localData?.cases}        
+              deaths = {localData?.deaths}        
+              refuses = {localData?.refuses}        
+              suspects = {localData?.suspects}        
+            />
+          )
+        }
         <span className="select">Selecione um estado</span>
 
         <div className="map-box">
+        <a className="stats-brazil" href="#stats-box" onClick={() => {handleMapSelect("/brazil")}}>  Brasil</a>
         <svg version="1.1" id="svg-map" x="0px" y="0px" width="490px" height="500px" viewBox="0 0 450 460" enable-background="new 0 0 450 460" >
         <g>
           <a href="#stats-box" id="#tocantins" className="estado" onClick={() => {handleMapSelect("uf/to")}}>

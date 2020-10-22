@@ -29,16 +29,28 @@ div.stats-wrapper {
   padding-bottom: 14px;
 }
 
-.stats-header .local {
+.stats-header .back-icon .back{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  color: #FFF;
+  height: 36px;
+  width: 36px;
+  background-color: #2d6187;
+  border-radius: 12px;
+
+  transition: background-color 0.2s;
+}
+
+.stats-header .back-icon .back a:hover {
+  background-color: #0f3e5f;
 }
 
 .stats-header .local h1 {
   margin-left: 12px;
   font-family: 'Montserrat', sans-serif;
 }
+
 
 .stats-header .local .local-flag {
   height: 50px;
@@ -89,11 +101,18 @@ div.stats-wrapper {
   font-size: 20px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 90px;
   text-align: center;
+}
+
+.second-stats .letality {
   color: #D80000
+}
+
+.second-stats .recovery {
+  color: #049c80;
 }
 
 @media (max-width: 1100px) {
@@ -110,7 +129,7 @@ div.stats-wrapper {
     border-bottom: 1px solid #8DCAB8;
     padding-bottom: 14px;
   }
-
+  
   .stats-header .back-icon .back{
     display: flex;
     justify-content: center;
@@ -124,15 +143,15 @@ div.stats-wrapper {
 
     transition: background-color 0.2s;
   }
-  
-  .stats-header .back-icon .back a:hover {
+
+  .stats-header .back-icon .back:hover {
     background-color: #0f3e5f;
   }
 
   .stats-header .local h1 {
     margin-left: 12px;
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(10px, 25px, 30px);
+    font-size: 30px;
   }
 
   .stats-stats .info{
@@ -154,7 +173,7 @@ div.stats-wrapper {
     font-size: 20px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     height: 90px;
     line-height: 32px;

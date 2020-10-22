@@ -3,24 +3,27 @@ import { RiVirusFill, RiAlertFill, RiCheckboxCircleFill, RiSkullFill, RiArrowUpL
 import 'remixicon/fonts/remixicon.css'
 
 import { formatNumber } from '../utils/formatNumber';
-import '../styles/components/Stats.css'
+import '../styles/components/StatsBrazil.css';
 
-export interface StatsProps {
-    uid?: number,
-    uf?: string
-    state?: string,
+export interface StatsBrazilProps {
+    country?: string,
     cases?: number,
+    confirmed?: number,
     deaths?: number,
-    suspects?: number,
-    refuses?: number,
-    datetime?: string
+    recovered?: number,
+    updated_at?: string
 }
 
-const Stats: React.FC<StatsProps> = ( { state, cases, deaths, suspects, refuses}) => {
-  let letality = 0
+const StatsBrazil: React.FC<StatsBrazilProps> = ( { country, cases, confirmed, deaths, recovered }) => {
+  let letality = 0;
+  let recovery = 0
 
-  if (deaths && cases) {
-    letality = (deaths / cases * 100)
+  if (deaths && confirmed) {
+    letality = (deaths / confirmed * 100)
+  }
+
+  if (recovered && confirmed) {
+    recovery = (recovered / confirmed * 100)
   }
   
   return (
@@ -30,8 +33,8 @@ const Stats: React.FC<StatsProps> = ( { state, cases, deaths, suspects, refuses}
           <div className="stats-header">
             <div className="local">
               <img className="local-flag"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2000px-Flag_of_Brazil.svg.png" alt="Bandeira do Brasil"/>
-              <h1>{state}</h1>
-            </div>    
+              <h1>{country}</h1>
+            </div>
             <div className="back-icon">   
               <a className="back" href="#main">
                 <RiArrowUpLine />
@@ -44,21 +47,21 @@ const Stats: React.FC<StatsProps> = ( { state, cases, deaths, suspects, refuses}
               <div className="icon virus-icon">
                 <RiVirusFill />
               </div>
-              Total de casos: {formatNumber(cases)}
+              Total de casos: {formatNumber(confirmed)}
             </div>
 
             <div className="info">
               <div className="icon alert-icon">
                 <RiAlertFill />
               </div>
-              Casos suspeitos: {formatNumber(suspects)}
+              Casos ativos: {formatNumber(cases)}
             </div>
 
             <div className="info">
               <div className="icon refuse-icon">
                 <RiCheckboxCircleFill />
               </div>
-              Casos descartados: {formatNumber(refuses)}
+              Casos recuperados: {formatNumber(recovered)}
             </div>
 
             <div className="info">
@@ -73,6 +76,10 @@ const Stats: React.FC<StatsProps> = ( { state, cases, deaths, suspects, refuses}
             <div className="letality">
               <strong>Letalidade:</strong><br/>
                 {letality.toFixed(2)} %
+
+            </div><div className="recovery">
+              <strong>Recuperação:</strong><br/>
+                {recovery.toFixed(2)} %
             </div>
           </div>
         </div>
@@ -81,4 +88,4 @@ const Stats: React.FC<StatsProps> = ( { state, cases, deaths, suspects, refuses}
   )
 }
 
-export default Stats;
+export default StatsBrazil;
