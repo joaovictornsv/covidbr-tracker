@@ -18,6 +18,7 @@ div.stats-wrapper {
 
 .stats-content {
   height: 100%;
+  width: 100%
 }
 
 .stats-header {
@@ -36,7 +37,7 @@ div.stats-wrapper {
 }
 
 .stats-header .local h1 {
-  font-size: 40px;
+  font-size: 24px;
   margin-left: 12px;
   font-family: 'Montserrat', sans-serif;
 }
@@ -56,7 +57,7 @@ div.stats-wrapper {
 
 .stats-stats .info{
   color: #000;
-  font-size: 34px;
+  font-size: 26px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -100,11 +101,16 @@ div.stats-wrapper {
 
 @media(max-width: 1050px) and (min-width: 820px) {
   div.stats-wrapper {
-    max-width: 90%;
+    max-width: 100%;
   }
 
   .stats-header .local h1 {
     font-size: 24px;
+  }
+
+  .stats-header .local .local-flag {
+    height: 40px;
+    border-radius: 12px;
   }
 
   .stats-stats .info {
@@ -125,8 +131,9 @@ div.stats-wrapper {
   div.stats-wrapper {
     display:flex;
     justify-content: center;
+    margin-bottom: 40px;
   }
-
+  
   .stats-header {
     width: 100%;
     display: flex;
