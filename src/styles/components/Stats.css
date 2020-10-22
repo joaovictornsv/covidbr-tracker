@@ -129,10 +129,15 @@ div.stats-wrapper {
     background-color: #0f3e5f;
   }
 
+  .stats-header .local .local-flag {
+    max-height: 40px;
+    border-radius: 12px;
+  }
+
   .stats-header .local h1 {
     margin-left: 12px;
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(10px, 25px, 30px);
+    font-size: 20px
   }
 
   .stats-stats .info{
@@ -142,6 +147,7 @@ div.stats-wrapper {
     flex-direction: column;
     align-items: center;
     padding: 18px 0;
+    text-align: center;
   }
   
   .stats-stats .icon {

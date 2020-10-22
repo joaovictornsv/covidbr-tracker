@@ -1,6 +1,9 @@
 import React from 'react';
 import { RiVirusFill, RiAlertFill, RiCheckboxCircleFill, RiSkullFill, RiArrowUpLine } from "react-icons/ri";
-import 'remixicon/fonts/remixicon.css'
+import 'remixicon/fonts/remixicon.css';
+import { FaCross } from 'react-icons/fa';
+
+import BrazilFlag from '../assets/images/bandeiras/bandeira_brasil.png';
 
 import { formatNumber } from '../utils/formatNumber';
 import '../styles/components/StatsBrazil.css';
@@ -14,7 +17,7 @@ export interface StatsBrazilProps {
     updated_at?: string
 }
 
-const StatsBrazil: React.FC<StatsBrazilProps> = ( { country, cases, confirmed, deaths, recovered }) => {
+const StatsBrazil: React.FC<StatsBrazilProps> = ( { cases, confirmed, deaths, recovered }) => {
   let letality = 0;
   let recovery = 0
 
@@ -32,8 +35,8 @@ const StatsBrazil: React.FC<StatsBrazilProps> = ( { country, cases, confirmed, d
         <div className="stats-content">
           <div className="stats-header">
             <div className="local">
-              <img className="local-flag"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2000px-Flag_of_Brazil.svg.png" alt="Bandeira do Brasil"/>
-              <h1>{country}</h1>
+              <img className="local-flag"  src={BrazilFlag} alt="Bandeira do Brasil"/>
+              <h1>Brasil</h1>
             </div>
             <div className="back-icon">   
               <a className="back" href="#main">
@@ -66,7 +69,7 @@ const StatsBrazil: React.FC<StatsBrazilProps> = ( { country, cases, confirmed, d
 
             <div className="info">
               <div className="icon death-icon">
-                <RiSkullFill />
+                <FaCross />
               </div>
               Mortes: {formatNumber(deaths)}
             </div>

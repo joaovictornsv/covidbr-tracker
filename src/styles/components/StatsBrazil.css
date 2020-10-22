@@ -151,7 +151,7 @@ div.stats-wrapper {
   .stats-header .local h1 {
     margin-left: 12px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
+    font-size: clamp(10px, 20px, 20px);
   }
 
   .stats-stats .info{
@@ -170,7 +170,7 @@ div.stats-wrapper {
   }
 
   .second-stats {
-    font-size: 20px;
+    font-size: 16px;
     width: 100%;
     display: flex;
     justify-content: space-evenly;

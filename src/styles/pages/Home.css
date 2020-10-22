@@ -25,7 +25,7 @@ div.stats-wrapper {
   grid-area: stats;
 }
 
-div.map-box {
+div#map-box {
   position: relative;
   display:flex;
   align-items: center;
@@ -33,7 +33,7 @@ div.map-box {
   grid-area: mapa
 }
 
-div.map-box a {
+div#map-box a {
   position: absolute;
   padding: 10px 20px;
   background-color: #51A089;
@@ -47,7 +47,7 @@ div.map-box a {
   transition: background-color 0.2s;
 }
 
-div.map-box a:hover {
+div#map-box a:hover {
   background-color: #23745d;
 }
 
@@ -115,19 +115,19 @@ span.select {
     justify-self: center;
   }
 
-  div.map-box { 
+  div#map-box { 
     display:flex;
     flex-direction: column;
     justify-content: center;
     margin-bottom: 10px;
   }
 
-  div.map-box a {
-    top: 20px;
+  div#map-box a {
+    top: 8px;
     right: 50px;
   }
 
-  div.map-box svg {
+  div#map-box svg {
     width: 90%;
     height: auto;
   }

@@ -36,27 +36,10 @@ function Home() {
     <div id="main">
       <div className="content-main">
         <img src={covidBrLogo} alt="CovidBR" className="logo"/>
-        {(local === '/brazil') ? (
-            <StatsBrazil
-              country = {country?.country}        
-              cases = {country?.cases}        
-              deaths = {country?.deaths}        
-              recovered = {country?.recovered}        
-              confirmed = {country?.confirmed} 
-            />
-          ) : (
-            <Stats
-              state = {localData?.state}        
-              cases = {localData?.cases}        
-              deaths = {localData?.deaths}        
-              refuses = {localData?.refuses}        
-              suspects = {localData?.suspects}        
-            />
-          )
-        }
+        
         <span className="select">Selecione um estado</span>
 
-        <div className="map-box">
+        <div id="map-box">
         <a className="stats-brazil" href="#stats-box" onClick={() => {handleMapSelect("/brazil")}}>  Brasil</a>
         <svg version="1.1" id="svg-map" x="0px" y="0px" width="490px" height="500px" viewBox="0 0 450 460" enable-background="new 0 0 450 460" >
         <g>
@@ -218,7 +201,7 @@ function Home() {
             c-0.384-6.081-1.028-1.986-3.382-1.903C94.336,180.686,85.957,181.671,83.34,180.232z"></path>
             
           </a>
-          <a href="#stats-box" id="#matogrosso" className="estado" onClick={() => {handleMapSelect("uf/mg")}} >
+          <a href="#stats-box" id="#matogrosso" className="estado" onClick={() => {handleMapSelect("uf/mt")}} >
             <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M142.237,173.962
             c4-0.316-1.888-6.452,5-5.738c7.914,0.808,16.295,0.328,24.279,0.218c1.629-0.013,8.902,1.288,7.395-1.833
             c-1.192-2.453,1.821-6.425,0.425-9.725c2.027-0.864,1.289-3.807,2.629-5.107c1.151-1.123,4.176,7.244,4.436,7.819
@@ -233,7 +216,7 @@ function Home() {
             C143.581,176.618,141.937,174.714,142.237,173.962z"></path>
             
           </a>
-          <a href="#stats-box" id="#mattogrossodosul" className="estado" onClick={() => {handleMapSelect("uf/mms")}} >
+          <a href="#stats-box" id="#mattogrossodosul" className="estado" onClick={() => {handleMapSelect("uf/ms")}} >
             <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M183.198,294.536
             c2.136-4.464,3.177-9.394,5.312-13.61c1.712-3.344-4.067-7.587-2.423-9.807c0.027-0.026,2.738,3.641,3.917,3.725
             c3.204-1.534,4.807-2.272,6.984-5.228c2.615-3.59,10.832-3.014,14.051-0.305c1.259,1.041,3.068,2.107,4.668,2.574
@@ -357,6 +340,26 @@ function Home() {
         </g>
         </svg>
         </div>
+        
+        {(local === '/brazil') ? (
+            <StatsBrazil
+              country = {country?.country}        
+              cases = {country?.cases}        
+              deaths = {country?.deaths}        
+              recovered = {country?.recovered}        
+              confirmed = {country?.confirmed} 
+            />
+          ) : (
+            <Stats
+              state = {localData?.state}        
+              cases = {localData?.cases}        
+              deaths = {localData?.deaths}        
+              refuses = {localData?.refuses}        
+              suspects = {localData?.suspects}    
+              uf = {localData?.uf}    
+            />
+          )
+        }
       </div>
     </div>
   )
