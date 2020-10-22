@@ -1,5 +1,6 @@
 div.stats-wrapper {
   max-width: 100%;
+  max-height: 100%;
 }
 
 #stats-box {
@@ -96,7 +97,31 @@ div.stats-wrapper {
   color: #D80000
 }
 
-@media (max-width: 1100px) {
+
+@media(max-width: 900px) and (min-width: 820px) {
+  div.stats-wrapper {
+    max-width: 90%;
+  }
+
+  .stats-header .local h1 {
+    font-size: 24px;
+  }
+
+  .stats-stats .info {
+    font-size: 18px;
+  }
+
+  .second-stats {
+    font-size: 16px;
+  }
+
+  div#map-box svg{
+    display: flex;
+    width: 95%;
+  }
+}
+
+@media (max-width: 820px) {
   div.stats-wrapper {
     display:flex;
     justify-content: center;

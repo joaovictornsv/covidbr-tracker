@@ -34,6 +34,16 @@ function Home() {
 
   return(
     <div id="main">
+      <div className="credits">
+        
+          By <strong>
+            <a href="https://github.com/joaovictornsv" target="_blank" rel="noopener noreferrer">
+              João Victor
+            </a>
+          </strong>
+        
+      </div>
+
       <div className="content-main">
         <img src={covidBrLogo} alt="CovidBR" className="logo"/>
         
@@ -44,12 +54,12 @@ function Home() {
         <svg version="1.1" id="svg-map" x="0px" y="0px" width="490px" height="500px" viewBox="0 0 450 460" enable-background="new 0 0 450 460" >
         <g>
           <a href="#stats-box" id="#tocantins" className="estado" onClick={() => {handleMapSelect("uf/to")}}>
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M289.558,235.641
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M289.558,235.641
             c16.104,0.575,44.973-31.647,44.835-45.259c-0.136-13.612-17.227-58.446-22.349-66.088c-5.122-7.628-37.905,2.506-37.905,2.506
             S234.852,233.695,289.558,235.641z" ></path>
           </a>
           <a href="#stats-box" id="#bahia" className="estado" onClick={() => {handleMapSelect("uf/ba")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M313.276,197.775
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M313.276,197.775
             c2.084-2.739,3.506-7.012,6.464-8.764c1.641-0.973,3.232-4.684,4.271-5.163c2.304-1.014,12.161-25.143,20.706-22.513
             c1.095,0.342,29.881,3.478,32.153,7.532c2.246-0.506,17.582-8.804,25.829-4.999c9.172,4.246,11.225,20.679,11.2,20.843
             c0.107,0.328-0.823,5.765-0.985,5.929c-1.15,1-5.258-0.807-4.22,2.138c1.317,3.751,5.094,10.583,9.97,6.613
@@ -60,7 +70,7 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#sergipe" className="estado" onClick={() => {handleMapSelect("uf/se")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M408.561,191.735
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M408.561,191.735
             c0.521-1.505,2.465-0.725,3.533-0.794c2.273-0.164,0.494-2.738,1.095-3.778c2.026-3.793-2.738-5.999-1.998-10.408
             c4.024,1.931,9.448,3.397,12.408,6.89c1.343,1.533,5.504,2.656,5.832,4.847c-6.822,0.384-6.901,8.819-11.942,11.572
             C413.545,202.212,407.055,193.721,408.561,191.735z"></path>
@@ -68,7 +78,7 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#pernambuco" className="estado" onClick={() => {handleMapSelect("uf/pe")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M373.011,167.238
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M373.011,167.238
             c2.709-0.795,6.218-14.106,8.325-15.106c4.136-1.986,17.255-1.437,17.8,4.903c-0.437-0.068,8.189-2.273,7.479-1.466
             c1.7-0.711,10.518-4.723,12.599-4.82c0.274-0.013,4.603,0.905,3.068,2.315c-0.464,0.439,4.219,3.698,10.789,3.45
             c4.66-0.176,5.179-3.436,8.627-4.409c5.89-1.67,4.737,3.698,5.589,6.943c-1.182,2.684-1.646,5.586-2.74,8.285
@@ -78,19 +88,19 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#alagoas" className="estado" onClick={() => {handleMapSelect("uf/al")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M413.953,169.018
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M413.953,169.018
             c3.78,3.313,9.424,5.505,12.547,5.491c3.229-0.013,5.009-3.328,7.421-4.794c1.177-0.712,10.297-1.93,9.174,1.042
             c-1.807,4.848-7.122,8.585-10.024,12.789c-2.792,2-3.423,7.093-6.354,1.864c-3.259,0.424-3.722-4.424-6.957-4.477
             c-3.668-2.261-7.998-3.769-11.201-6.342C410.615,172.646,412.751,171.359,413.953,169.018z"></path>
             </a>
           <a href="#stats-box" id="#riograndedonorte" className="estado" onClick={() => {handleMapSelect("uf/rn")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M404.698,138.795
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M404.698,138.795
             c2.383-4.027,6.574-6.123,8.49-11.149c1.973-5.107,3.834-5.818,8.764-4.642c5.041,1.207,9.339,0.837,14.57,1.671
             c7.534,1.193,6.848,10.968,9.206,16.516c-1.919,1.096-13.972,0.521-15.064-1.657c-1.041-2.067-2.904,7.107-5.094,7.3
             c1.532-5.847-12.654,1.78-5.424-8.683c2.545-3.67-6.302-0.808-6.711,0.725C410.121,144.013,407.217,139.151,404.698,138.795z"></path>
             </a>
           <a href="#stats-box" id="#ceara" className="estado" onClick={() => {handleMapSelect("uf/ce")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M372.379,104.409
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M372.379,104.409
             c0.437-1.368,2.961-3.627,1.043-5.025c12.106-1.328,17.581-0.849,27.66,6.723c4.026,3.054,6.822,5.574,10.571,9.147
             c1.317,1.273,7.614,4.313,7.914,6.164c-0.054-0.316-5.396,3.696-5.997,5.217c-1.066,2.684-2.659,6.093-4.3,8.298
             c0.025-0.055-6.903,3.957-3.532,4.217c-4.41,3.821-1.015,8.135-0.797,11.517c0.196,2.767-4.38,7.587-6.765,5.422
@@ -100,7 +110,7 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#piaui" className="estado" onClick={() => {handleMapSelect("uf/pi")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M320.781,185.478
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M320.781,185.478
             c2.465-5.149-7.505-20.801-7.505-20.801s47.354-65.868,54.285-66.841c0.299-0.042,6.243,1.768,6.463,2.219
             c0.438,0.863-0.821,5.244-0.685,6.587c0.275,2.629,2.879,6.587,2.328,8.684c-1.15,4.736-1.863,6.134,1.369,9.901
             c2.794,3.245,0.325,10.16,2.544,14.269c-1.778,4.23,4.768,3.656,3.943,7.613c-0.655,3.163-5.424,7.655-1.176,10.312
@@ -110,7 +120,7 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#maranhao" className="estado" onClick={() => {handleMapSelect("uf/ma")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M288.845,127.827
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M288.845,127.827
             c4.108-2.726,31.195-48.985,31.386-50.395c1.235,0.397,6.084,7.435,7.562,5.025c0.493,0.013-0.328,2.15-0.547,2.396
             c-0.054-0.135,2.189-2.286,2.52-2.436c0.521-0.233,1.948,1.903,3.451-0.726c5.642,1.575,1.314,14.31,9.121,11.694
             c-1.147,0.384,1.452,0.74,0.848,1.905c5.095-6.587,8.488-0.027,15.337,1.491c2.025,0.466,6.243,0.575,8.162,0.207
@@ -125,7 +135,7 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#amapa" className="estado" onClick={() => {handleMapSelect("uf/ap")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M225.198,39.089
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M225.198,39.089
             c3.274,1.165,3.985-1.315,6.572-1.74c3.616-0.603,5.683,2.725,9.037,2.067c4.055-0.78,7.093-8.025,7.314-11.598
             c4.492-3.534,5.503-11.258,9.42-14.68c6.055,4.258,6.11,15.788,7.589,22.485c-0.164,0.083,6.57,7.998,7.944,8.682
             c3.396,1.657,3.366,6.203,0.078,9.34c-3.777,3.587-7.449,34.275-7.449,34.275h-46.489c0,0,0.932-50.366,0-51.449
@@ -133,7 +143,7 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#para" className="estado" onClick={() => {handleMapSelect("uf/pa")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M173.378,50.619
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M173.378,50.619
             c2.259,2.63,5.629-4.478,7.901-3.82c3.19,0.918,1.478-1.108,5.026-1.752c1.931,0.806,3.096,0.273,3.519-1.631
             c0.535-1.26,1.453-1.726,2.725-1.384c1.768-1.684,13.558,3.603,14.68,0.384c0.629-1.821-4.287-5.709-0.302-6.997
             c1.643-0.533,6.012,0.808,8.75-0.068c3.986-1.288,4.876,2.684,4.382,6.066c0.631,3.587,13.145,5.766,12.982,7.97
@@ -150,7 +160,7 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#roraima" className="estado" onClick={() => {handleMapSelect("uf/rr")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M113.18,24.107
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M113.18,24.107
             c-0.972-2.753-7.861-5.889-6.999-8.984c0.068-0.232,13.229,6.053,12.79,2.808c0.398,1.329,1.219,1.889,2.439,1.685
             c1.889-1.301,7.148,4.204,8.216,1.889c0.438-0.959-1.657-3.753,0.74-3.848c1.026,0.438,1.534,0.164,1.52-0.822
             c0.835-1.752,3.575,0.219,4.793,0.083c0.767-1.056,10.625-3.026,9.037-5.094c1.37,0.438,4.574,0.808,4.63-1.547
@@ -161,7 +171,7 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#amazonas" className="estado" onClick={() => {handleMapSelect("uf/am")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M10.078,136.412
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M10.078,136.412
             c1.15-4.972,4.258-10.394,8.215-13.105c4.41-3.027,7.656-5.71,13.105-6.082c2.165-0.149,10.216-5.75,11.983-2.984
             c3.711,5.765,4.998-3.739,5.574-7.025c1.726-9.667,3.697-19.322,4.86-29.086c-0.342-1.356-2.013-6.231-2.833-7.163
             c-1.453-1.616-4.287-2.122-4.768-4.544c-0.272-1.452-0.574-7.258,1.109-8.121c3.494-1.768,6.547-0.042,9.737-0.89
@@ -181,7 +191,7 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#acre" className="estado" onClick={() => {handleMapSelect("uf/ac")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M3.656,148.545
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M3.656,148.545
             c12.557,7.544,27.524,8.367,41.082,13.2c12.802,8.065,27.278,12.845,40.616,19.872c-2.834,1.205-7.587,4.382-9.983,6.395
             c-2.93,2.45-1.3,2.04-4.628,1.957c-2.93-0.069-3.957,4.615-7.203,5.259c-2.999,0.603-7.161-1.958-10.995-1.697
             c-1.905,0.136-11.969-0.056-12.64,0.603c0.313-3.642-0.385-7.299-0.165-10.941c0.096-1.439,1.998-6.533,1.245-7.451
@@ -190,7 +200,7 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#rondonia" className="estado" onClick={() => {handleMapSelect("uf/ro")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M83.34,180.232
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M83.34,180.232
             c0.931-1.574,5.341-4.668,6.312-4.656c1.355-0.067,2.671,0.138,3.958,0.603c3.012,1.44,2.039-1.135,5.341-0.123
             c-1.274-2.287,3.793-2.943,2.86-0.315c3.068,0.247,2.725-4.683,6.668-5.12c4.438-0.508,5.054-0.646,7.122-4.534
             c0.135-0.246,2.628-5.519,2.752-5.025c2.191-6.491,14.585-0.878,15.638,3.355c0.397,1.615,1.834,3.137,3.642,4.369
@@ -202,7 +212,7 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#matogrosso" className="estado" onClick={() => {handleMapSelect("uf/mt")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M142.237,173.962
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M142.237,173.962
             c4-0.316-1.888-6.452,5-5.738c7.914,0.808,16.295,0.328,24.279,0.218c1.629-0.013,8.902,1.288,7.395-1.833
             c-1.192-2.453,1.821-6.425,0.425-9.725c2.027-0.864,1.289-3.807,2.629-5.107c1.151-1.123,4.176,7.244,4.436,7.819
             c1.097,2.451,0.398,5.478,1.932,7.654c1.41,1.987,4.574,2.136,5.889,4.259c3.136,5.136,10.845,4.137,17.13,4.657
@@ -217,7 +227,7 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#mattogrossodosul" className="estado" onClick={() => {handleMapSelect("uf/ms")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M183.198,294.536
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M183.198,294.536
             c2.136-4.464,3.177-9.394,5.312-13.61c1.712-3.344-4.067-7.587-2.423-9.807c0.027-0.026,2.738,3.641,3.917,3.725
             c3.204-1.534,4.807-2.272,6.984-5.228c2.615-3.59,10.832-3.014,14.051-0.305c1.259,1.041,3.068,2.107,4.668,2.574
             c3.163,0.934,5.889-3.013,8.559-0.873c3.724,2.982,4.626-1.862,7.86-3.509c1.945-1.012-1.768,8.465-2.244,7.781
@@ -229,7 +239,7 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#goias" className="estado" onClick={() => {handleMapSelect("uf/go")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M237.768,270.519
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M237.768,270.519
             c0.628-2.904,1.835-7.396,4.709-8.766c1.015-1.644,1.754-5.147,2.275-5.586c2.408-2.247,3.889-3.783,6.63-4.656
             c3.723-1.205,3.338-5.342,4.846-8.165c1.504-2.845,4.736-1.15,5.942-3.382c1.479-2.834,0.741-6.161,2.189-8.874
             c2.902-5.531,1.862-17.363,8.656-20.567c-4.878,7.641,3.698,4.971,7.201,9.449c2.273,1.738,2.164-1.822,2.71-3.055
@@ -245,7 +255,7 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#parana" className="estado" onClick={() => {handleMapSelect("uf/pr")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M222.225,363.694
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M222.225,363.694
             c1.807-2.138,1.889-4.881,2.424-7.479c0.301-1.453,0.465-7.86,1.369-8.736c2.3-0.684,2.3-3.315,2.726-5.204
             c0.616-2.738,2.821-2.958,3.984-5.616c4.369-9.91,38.947-9.529,46.476-9.227c4.658,0.193,15.775,34.563,17.916,33.794
             c-1.728,2.19-5.754,8.929-8.41,8.984c-4.054,0.057-14.215,14.68-14.215,14.68s-37.329-12.05-40.287-11.285
@@ -253,7 +263,7 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#santacatarina" className="estado" onClick={() => {handleMapSelect("uf/sc")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M231.029,383.959
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M231.029,383.959
             c1.669-3.338-0.284-10.516,4.573-10.569c6.631-0.109,13.639,3.559,20.402,3.888c1.317,0.055,5.231,2.163,4.357-1.15
             c-1.095-4.164,3.945-1.863,5.67-3.179c2.274-1.724,8.187-4.106,11.311-1.367c1.423,1.809,20.05-5.395,13.284,3.946
             c-1.368,1.395,0.713,10.789,0.466,10.734c-3.449,4.438,1.726,11.666-5.096,15.334c-2.901,1.536-7.284,7.779-9.64,9.995
@@ -261,7 +271,7 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#riograndedosul" className="estado" onClick={() => {handleMapSelect("uf/rs")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M191.236,416.881
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M191.236,416.881
             c0.52-2.684,7.38-8.409,9.477-10.351c0.37-0.359,8.599-10.08,9.174-8.329c-1.301-3.89,2.781-1.589,3.917-4.819
             c0.26-0.521,7.04-4.821,7.109-4.795c1.436-0.191,6.721-3.695,7.421-3.257c1.204-2.028,8.927-1.479,8.653-0.824
             c1.165-0.38,2.284-0.877,3.326-1.479c0.221-0.821,22.459,7.533,24.319,11.531c2.523,5.34,12.217,2.822,13.15,5.563
@@ -272,7 +282,7 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#saopaulo" className="estado" onClick={() => {handleMapSelect("uf/sp")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M239.3,330.554
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M239.3,330.554
             c3.26-4.356,9.56-5.039,11.531-10.792c1.369-3.942,3.889-8.818,6.135-13.036c1.561-2.957,7.749-7.121,10.517-8.65
             c0.383-0.196,32.974-6.138,42.234-1.701c20.265,9.724,26.017,33.879,27.854,33.304c4.408-1.425,5.34,3.778,2.106,4.49
             c-1.754,0.413-6.519,1.479-6.49,3.399c0.027,3.448,0.521,1.615-2.931,3.639c-2.189-1.42-3.34,4.111-4.763,3.426
@@ -284,7 +294,7 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#minasgerais" className="estado" onClick={() => {handleMapSelect("uf/mg")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M262.881,297.305
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M262.881,297.305
             c-1.696-5.094,15.531-19.882,18.844-13.421c5.531-7.367,15.886,1.588,19.773-3.944c0.988-1.367,3.015-1.453,3.725-2.957
             c0.326-0.711-0.493-2.793-0.056-3.888c1.369-3.398-4.873-2.355-0.109-6.603c4.547-4.053-1.917-4.739-1.204-8.186
             c0.957-4.604,1.807-4.713,5.613-6.027c1.943-0.688,0.906-8.272,0.083-8.52c-0.108-2.699,1.974-2.546,3.782-1.617
@@ -303,7 +313,7 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#riodejaneiro" className="estado" onClick={() => {handleMapSelect("uf/rj")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M332.886,337.429
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M332.886,337.429
             c-1.26-2.768,8.409-4.795,7.89-6.71c-3.177-1.864-4.602,1.148-6.63-2.959c4.274-0.686,9.533-4.49,13.831-3.562
             c0.548-0.219,4.902-1.753,4.96,0.167c2.546-1.566,5.479-2.412,8.105-3.837c2.246-1.206,0.932-8.218,3.725-9.643
             c6.054-3.123,1.398,1.836,7.066,2.959c5.888,1.205,5.395,1.48,5.641,7.067c0.247,5.642-8.763,4.381-11.063,8.764
@@ -315,7 +325,7 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#espiritosanto" className="estado" onClick={() => {handleMapSelect("uf/es")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M367.119,308.834
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M367.119,308.834
             c1.044-1.999-0.298-5.451,1.841-6.326c3.697-1.453,3.858-0.467,5.941-4.49c0.767-1.563,3.999-5.807,2.848-7.835
             c-0.439-0.765-3.204-3.613-3.286-4.05c1.04-0.249,2.079-0.219,3.123,0.054c1.366-0.654-6.465-10.519,2.137-8.054
             c-1.204-0.655-1.535-1.365-0.932-2.135c4.358-0.138,13.856,0.027,12.845,6.738c-0.577,3.835,0.933,8.079-0.577,11.804
@@ -325,12 +335,12 @@ function Home() {
             
           </a>
           <a href="#stats-box" id="#distritofederal" className="estado" onClick={() => {handleMapSelect("uf/df")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M292.461,246.197
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M292.461,246.197
             c0,0,12.929-2.903,14.188,0c1.233,2.903,0.659,10.683-1.424,11.504c-2.08,0.849-14.296-1.806-14.023-3.313
             C291.503,252.853,292.461,246.197,292.461,246.197z"></path>
             </a>
           <a href="#stats-box" id="#paraiba" className="estado" onClick={() => {handleMapSelect("uf/pb")}} >
-            <path stroke="#3e978b" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M401.575,141.096
+            <path stroke="#FFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M401.575,141.096
             c2.081-3.081,16.791-6.82,19.117-4.616c0,1.918,7.259,1.686,10.133,2.712c-0.492,3.038,12.652,1.533,14.408,2.259
             c1.421,0.589,3.833,11.983,1.421,12.202c-0.874-1.124-2.083-1.739-3.586-1.835c-2.957-0.027-2.546,1.863-4.383,3.108
             c-2.626,1.767-6.571,1.917-9.558,2.109c-0.162,1.232-3.943,4.438-5.259,4.916c-3.122,1.149-2.657-2.727-5.095-3.602
