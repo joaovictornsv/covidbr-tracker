@@ -1,0 +1,113 @@
+#main {
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(130.06% 386.77% at -4.51% -3.78%, #D2F5E3 0%, #A5ECD7 88.62%), #C4C4C4;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+#main .content-main {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 80px 1fr;
+  grid-template-areas:
+    'logo logo'
+    'mapa stats';
+}
+
+div.stats-wrapper {
+  display:flex;
+  align-items: center;
+  justify-content: flex-end;
+  grid-area: stats;
+}
+
+div.map-box {
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  grid-area: mapa
+}
+
+img.logo {
+  grid-area: logo;
+}
+
+span.select {
+  font-size: 18px;
+  display: none;
+  grid-area: select;
+  color: #51A089;
+}
+
+#svg-map path {
+  fill: #99f3bd !important;
+}
+
+#svg-map a {
+  text-decoration: none;
+}
+
+#svg-map a:hover {
+  cursor: pointer;
+  text-decoration: none
+}
+
+#svg-map a:hover path {
+  fill: #28df99 !important
+}
+
+@media(max-width: 1100px) {
+  #main {
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    justify-content:center;
+  }
+
+  #main .content-main {
+    width: 100%;
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 1fr;
+    grid-template-areas:
+      'logo'
+      'select'
+      'mapa'
+      'stats';
+    
+    grid-gap: 15px
+  }
+
+  img.logo {
+    max-width: 200px;
+    justify-self: center;
+    grid-area: logo;
+  }
+  
+  span.select {
+    display: flex;
+    justify-self: center;
+  }
+
+  div.map-box { 
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  div.map-box svg {
+    max-width: 95%;
+  }
+
+  div#stats-box {
+    width: 95%;
+    margin-top: 20px;
+  }
+  
+}

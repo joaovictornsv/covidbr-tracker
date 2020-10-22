@@ -1,0 +1,137 @@
+div.stats-wrapper {
+  max-width: 100%;
+}
+
+#stats-box {
+  width: 100%;
+  height: 100%;
+  background: rgba(252, 252, 252, 0.9);
+  border-radius: 40px;
+
+  padding: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats-content {
+  height: 100%;
+  width: 100%;
+}
+
+.stats-header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #8DCAB8;
+  padding-bottom: 14px;
+}
+
+.stats-header h1 {
+  margin-left: 12px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.stats-header .local-flag {
+  height: 50px;
+  border-radius: 12px;
+}
+
+.stats-stats {
+  border-bottom: 1px solid #8DCAB8;
+}
+
+.stats-stats .info{
+  color: #000;
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.stats-stats .icon {
+  height: 36px;
+  font-size: 36px;
+  margin-right: 10px;
+}
+
+.stats-stats .virus-icon {
+  color: #2d6187;
+}
+
+.stats-stats .alert-icon {
+  color: #cf1b1b;
+}
+
+.stats-stats .refuse-icon {
+  color: #03c4a1;
+}
+
+.stats-stats .death-icon {
+  color: #1a1c20;
+}
+
+.second-stats {
+  margin-top: 30px;
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  text-align: center;
+  color: #D80000
+}
+
+@media (max-width: 1100px) {
+  div.stats-wrapper {
+    display:flex;
+    justify-content: center;
+  }
+
+  .stats-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #8DCAB8;
+    padding-bottom: 14px;
+  }
+  
+  .stats-header h1 {
+    margin-left: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+  }
+
+  .stats-stats .info{
+    color: #000;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 0;
+  }
+  
+  .stats-stats .icon {
+    height: 36px;
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+
+  .second-stats {
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    line-height: 32px;
+    text-align: center;
+    color: #D80000
+  }
+}
