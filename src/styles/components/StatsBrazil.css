@@ -1,11 +1,11 @@
 div.stats-wrapper {
   max-width: 100%;
   max-height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #stats-box {
-  width: 100%;
-  height: 100%;
   background: rgba(252, 252, 252, 0.9);
   border-radius: 40px;
 
@@ -18,7 +18,6 @@ div.stats-wrapper {
 
 .stats-content {
   height: 100%;
-  width: 100%;
 }
 
 .stats-header {
@@ -48,6 +47,7 @@ div.stats-wrapper {
 }
 
 .stats-header .local h1 {
+  font-size: 40px;
   margin-left: 12px;
   font-family: 'Montserrat', sans-serif;
 }
@@ -68,7 +68,7 @@ div.stats-wrapper {
 
 .stats-stats .info{
   color: #000;
-  font-size: 24px;
+  font-size: 34px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -99,7 +99,7 @@ div.stats-wrapper {
 
 .second-stats {
   margin-top: 30px;
-  font-size: 20px;
+  font-size: 24px;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -116,7 +116,7 @@ div.stats-wrapper {
   color: #049c80;
 }
 
-@media(max-width: 900px) and (min-width: 820px) {
+@media(max-width: 1050px) and (min-width: 820px) {
 
   div.stats-wrapper {
     max-width: 90%;
@@ -201,7 +201,7 @@ div.stats-wrapper {
   }
 
   .second-stats {
-    font-size: 20px;
+    font-size: 18px;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
