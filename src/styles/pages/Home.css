@@ -51,7 +51,7 @@ div#map-box a {
   padding: 10px 20px;
   background-color: #0e7985;
   top: 60px;
-  right: 90px;
+  right: 50px;
   cursor: pointer;
   color: #FFF;
   border-radius: 10px;
@@ -154,7 +154,7 @@ div#map-box svg {
 
   div#map-box a {
     top: 8px;
-    right: 50px;
+    right: 20px;
   }
 
   div#map-box svg {
