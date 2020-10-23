@@ -3,14 +3,14 @@ div.stats-wrapper {
   max-height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 #stats-box {
   background: rgba(252, 252, 252, 0.9);
   border-radius: 40px;
-
-  padding: 40px;
-
+  padding: 30px 40px;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,13 +37,13 @@ div.stats-wrapper {
 }
 
 .stats-header .local h1 {
-  font-size: 24px;
+  font-size: clamp(30px, 3.5vh, 36px);
   margin-left: 12px;
   font-family: 'Montserrat', sans-serif;
 }
 
 .stats-header .local .local-flag {
-  height: 50px;
+  height: 40px;
   border-radius: 12px;
 }
 
@@ -57,17 +57,19 @@ div.stats-wrapper {
 
 .stats-stats .info{
   color: #000;
-  font-size: 26px;
+  font-size: clamp(22px, 30vh, 26px);
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 18px 0;
+  padding: 15px 0;
 }
 
 .stats-stats .icon {
   height: 36px;
-  font-size: 36px;
+  font-size: 30px;
   margin-right: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .stats-stats .virus-icon {
@@ -87,19 +89,40 @@ div.stats-wrapper {
 }
 
 .second-stats {
-  margin-top: 30px;
-  font-size: 24px;
+  font-size: 18px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  height: 90px;
   text-align: center;
-  color: #D80000
+
+  padding-top: 30px;
 }
 
+.stats-header .local h1 {
+  font-size: 24px;
+}
+
+.stats-header .local .local-flag {
+  height: 40px;
+  border-radius: 12px;
+}
+
+.stats-stats .info {
+  font-size: 18px;
+}
+
+.second-stats {
+  font-size: 16px;
+}
+
+div#map-box svg{
+  display: flex;
+  width: 95%;
+}
 
 @media(max-width: 1050px) and (min-width: 820px) {
+
   div.stats-wrapper {
     max-width: 100%;
   }

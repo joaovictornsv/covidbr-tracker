@@ -1,5 +1,5 @@
 import React from 'react';
-import { RiVirusFill, RiAlertFill, RiCheckboxCircleFill, RiSkullFill, RiArrowUpLine } from "react-icons/ri";
+import { RiVirusFill, RiAlertFill, RiCheckboxCircleFill, RiArrowUpLine } from "react-icons/ri";
 import 'remixicon/fonts/remixicon.css';
 import { FaCross } from 'react-icons/fa';
 

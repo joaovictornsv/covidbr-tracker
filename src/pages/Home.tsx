@@ -30,11 +30,15 @@ function Home() {
         setLocalData(response.data)
       }
     })
-  }, [local])
+  }, [local, country])
 
   return(
     <div id="main">
-      <div className="credits">
+
+      <div className="content-main">
+        <img src={covidBrLogo} alt="CovidBR" className="logo"/>
+
+        <div className="credits">
         
           By <strong>
             <a href="https://github.com/joaovictornsv" target="_blank" rel="noopener noreferrer">
@@ -42,15 +46,10 @@ function Home() {
             </a>
           </strong>
         
-      </div>
-
-      <div className="content-main">
-        <img src={covidBrLogo} alt="CovidBR" className="logo"/>
-        
+        </div>
         <span className="select">Selecione um estado</span>
 
         <div id="map-box">
-        <a className="stats-brazil" href="#stats-box" onClick={() => {handleMapSelect("/brazil")}}>  Brasil</a>
         <svg version="1.1" id="svg-map" x="0px" y="0px" width="490px" height="500px" viewBox="0 0 450 460" enable-background="new 0 0 450 460" >
         <g>
           <a href="#stats-box" id="#tocantins" className="estado" onClick={() => {handleMapSelect("uf/to")}}>
@@ -351,6 +350,12 @@ function Home() {
         </svg>
         </div>
         
+        <div className="setBrazil">
+          <a className="stats-brazil" href="#stats-box" onClick={() => {handleMapSelect("/brazil")}}>
+            Estatísticas nacionais  
+          </a>
+        </div>
+
         {(local === '/brazil') ? (
             <StatsBrazil
               country = {country?.country}        

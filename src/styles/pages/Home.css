@@ -2,19 +2,17 @@
   position: relative;
   height: 100vh;
   width: 100vw;
-  background: radial-gradient(130.06% 386.77% at -4.51% -3.78%, #a6f6f1 0%, #a6f6f1 88.62%), #e8ffff;
-  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content:center;
 }
 
 #main .credits {
-  font-size: 18px;
+  font-size: clamp(14px, 2vh, 16px);
   position: absolute;
-  bottom: 15px;
-  left: 30px;
   font-weight: 500;
+  grid-area: credits;
+  bottom: 15px;
 }
 
 #main .credits a {
@@ -22,18 +20,40 @@
 }
 
 #main .content-main {
+  top: 20px;
+  position: absolute;
   width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 80px 1fr;
+  grid-template-rows: 65px 1fr 15px;
   grid-template-areas:
-    'logo logo'
-    'mapa stats';
+    'logo brazil'
+    'mapa stats'
+    'credits stats';
+}
+
+.setBrazil {
+  grid-area: brazil;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.setBrazil a {
+  padding: 10px 20px;
+  background-color: #0e7985;
+  cursor: pointer;
+  color: #FFF;
+  border-radius: 10px;
+  text-decoration: none;
+
+  transition: background-color 0.2s;
 }
 
 div.stats-wrapper {
   display:flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-end;
   grid-area: stats;
 }
@@ -46,20 +66,6 @@ div#map-box {
   grid-area: mapa;
 }
 
-div#map-box a {
-  position: absolute;
-  padding: 10px 20px;
-  background-color: #0e7985;
-  top: 60px;
-  right: 50px;
-  cursor: pointer;
-  color: #FFF;
-  border-radius: 10px;
-  text-decoration: none;
-
-  transition: background-color 0.2s;
-}
-
 div#map-box a:hover {
   background-color: #616161;
 }
@@ -69,7 +75,7 @@ img.logo {
   background-color: #FFF;
   padding: 15px;
   border-radius: 15px;
-  max-width: 400px;
+  max-height: 55px;
 }
 
 span.select {
@@ -80,8 +86,9 @@ span.select {
 }
 
 div#map-box svg {
-  width: 80%;
+  max-width: 90%;
   height: auto;
+  max-height: 90%;
 }
 
 #svg-map path {
@@ -114,14 +121,16 @@ div#map-box svg {
 
   #main .credits {
     font-size: 18px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%)
+    justify-self: center;
+    align-self: center;
+    height: 30px;
   }
 
   #main .content-main {
+    top: 0;
+    margin: 0;
     width: 98vw;
-    padding: 50px 0;
+    padding: 30px 0;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 50px 50px 1fr;
@@ -129,6 +138,7 @@ div#map-box svg {
       'logo'
       'select'
       'mapa'
+      'brazil'
       'stats';
     
     grid-gap: 15px
