@@ -124,6 +124,7 @@ div#map-box svg {
     justify-self: center;
     align-self: center;
     height: 30px;
+    bottom: -5px;
   }
 
   #main .content-main {
@@ -133,13 +134,14 @@ div#map-box svg {
     padding: 30px 0;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 50px 1fr;
+    grid-template-rows: 50px 50px 1fr 50px;
     grid-template-areas:
       'logo'
       'select'
       'mapa'
       'brazil'
-      'stats';
+      'stats'
+      'credits';
     
     grid-gap: 15px
   }
@@ -169,7 +171,7 @@ div#map-box svg {
 
   div#map-box svg {
     width: 100%;
-    height: auto;
+    max-height: 100vh;
   }
 
   div#stats-box {
