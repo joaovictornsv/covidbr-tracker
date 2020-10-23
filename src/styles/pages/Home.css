@@ -111,7 +111,7 @@ div#map-box svg {
 
 
 @media(max-width: 820px), (orientation: landscape) and
-(max-width: 600px), (orientation: portrait) {
+(max-width: 820px), (orientation: portrait) {
   #main {
     height: 100%;
     width: 100vw;

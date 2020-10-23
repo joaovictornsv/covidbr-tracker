@@ -6,13 +6,12 @@
 }
 
 body {
-  background: radial-gradient(130.06% 386.77% at -4.51% -3.78%, #a6f6f1 0%, #a6f6f1 88.62%) no-repeat fixed 100% 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 html {
+  background: #a6f6f1 no-repeat fixed 100% 100%;
   scroll-behavior: smooth;
 }
