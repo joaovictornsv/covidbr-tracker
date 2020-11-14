@@ -24,7 +24,6 @@ function Home() {
     api.get(`${local}`).then(response => {
       if (local === '/brazil') {
         setCountry(response.data.data)
-        console.log(country)
       }
       else {
         setLocalData(response.data)

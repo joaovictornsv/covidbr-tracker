@@ -69,10 +69,10 @@ const Stats: React.FC<StatsProps> = ( { state, cases, deaths, suspects, refuses,
   let flagPath = ''
 
   Object.entries(bandeirasPNG).map(key => {
-    if (key[0] === uf) {
-      flagPath = key[1]
-    }
-    return 0;
+  if (key[0] === uf) {
+    flagPath = key[1]
+  }
+  return 0;
   })
   
   return (
