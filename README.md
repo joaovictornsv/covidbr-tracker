@@ -1,7 +1,7 @@
 <div  align="center">
 <!-- Top Image and Title -->
 <h1>
-<img  src="https://i.imgur.com/2N1Ujsn.png"  width="500px"><br/>
+<img  src="https://i.imgur.com/HaGXcMb.png"  width="500px"><br/>
 </h1>
 <!-- Subtitle/Description -->
 <h4>CovidBR Tracker é uma aplicação cujo objetivo é apresentar os dados da Covid19 no Brasil em tempo real.</h4>
