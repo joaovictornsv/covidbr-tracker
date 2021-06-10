@@ -61,7 +61,7 @@ Please make sure to update tests as appropriate.
 
 ### :memo: License
 - :balance_scale: MIT License - [About](https://github.com/joaovictornsv/covidbr-tracker/blob/master/LICENSE)
-- 
+
 ---
 
 <div>
