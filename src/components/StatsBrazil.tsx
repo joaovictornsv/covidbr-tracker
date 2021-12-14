@@ -1,5 +1,5 @@
 import React from 'react';
-import { RiVirusFill, RiAlertFill, RiCheckboxCircleFill, RiArrowUpLine } from "react-icons/ri";
+import { RiVirusFill, RiArrowUpLine } from "react-icons/ri";
 import 'remixicon/fonts/remixicon.css';
 import { FaCross } from 'react-icons/fa';
 
@@ -10,25 +10,19 @@ import '../styles/components/StatsBrazil.css';
 
 export interface StatsBrazilProps {
     country?: string,
-    cases?: number,
     confirmed?: number,
     deaths?: number,
-    recovered?: number,
     updated_at?: string
 }
 
-const StatsBrazil: React.FC<StatsBrazilProps> = ( { cases, confirmed, deaths, recovered }) => {
+const StatsBrazil: React.FC<StatsBrazilProps> = ( { confirmed, deaths }) => {
   let letality = 0;
-  let recovery = 0
 
   if (deaths && confirmed) {
     letality = (deaths / confirmed * 100)
   }
 
-  if (recovered && confirmed) {
-    recovery = (recovered / confirmed * 100)
-  }
-  
+
   return (
     <div className="stats-wrapper">
       <div id="stats-box">
@@ -54,20 +48,6 @@ const StatsBrazil: React.FC<StatsBrazilProps> = ( { cases, confirmed, deaths, re
             </div>
 
             <div className="info">
-              <div className="icon alert-icon">
-                <RiAlertFill />
-              </div>
-              Casos ativos: {formatNumber(cases)}
-            </div>
-
-            <div className="info">
-              <div className="icon refuse-icon">
-                <RiCheckboxCircleFill />
-              </div>
-              Casos recuperados: {formatNumber(recovered)}
-            </div>
-
-            <div className="info">
               <div className="icon death-icon">
                 <FaCross />
               </div>
@@ -79,10 +59,6 @@ const StatsBrazil: React.FC<StatsBrazilProps> = ( { cases, confirmed, deaths, re
             <div className="letality">
               <strong>Letalidade:</strong><br/>
                 {letality.toFixed(2)} %
-
-            </div><div className="recovery">
-              <strong>Recuperação:</strong><br/>
-                {recovery.toFixed(2)} %
             </div>
           </div>
         </div>

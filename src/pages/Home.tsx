@@ -20,6 +20,11 @@ function Home() {
     setLocal(value)
   }
   
+  console.log('local', local);
+  console.log('country', country);
+  console.log('localData', localData);
+  
+
   useEffect(() => {
     api.get(`${local}`).then(response => {
       if (local === '/brazil') {
@@ -29,7 +34,7 @@ function Home() {
         setLocalData(response.data)
       }
     })
-  }, [local, country])
+  }, [local])
 
   return(
     <div id="main">
@@ -358,18 +363,16 @@ function Home() {
         {(local === '/brazil') ? (
             <StatsBrazil
               country = {country?.country}        
-              cases = {country?.cases}        
               deaths = {country?.deaths}        
-              recovered = {country?.recovered}        
               confirmed = {country?.confirmed} 
             />
           ) : (
             <Stats
               state = {localData?.state}        
               cases = {localData?.cases}        
-              deaths = {localData?.deaths}        
-              refuses = {localData?.refuses}        
-              suspects = {localData?.suspects}    
+              deaths = {localData?.deaths}
+              refuses = {localData?.refuses}
+              suspects = {localData?.suspects}
               uf = {localData?.uf}    
             />
           )
