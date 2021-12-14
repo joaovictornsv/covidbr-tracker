@@ -1,5 +1,5 @@
 import React from 'react';
-import { RiVirusFill, RiAlertFill, RiCheckboxCircleFill, RiArrowUpLine } from "react-icons/ri";
+import { RiVirusFill, RiArrowUpLine } from "react-icons/ri";
 
 import { FaCross } from 'react-icons/fa';
 
@@ -16,12 +16,10 @@ export interface StatsProps {
   state?: string,
   cases?: number,
   deaths?: number,
-  suspects?: number,
-  refuses?: number,
   datetime?: string
 }
 
-const Stats: React.FC<StatsProps> = ( { state, cases, deaths, suspects, refuses, uf}) => {
+const Stats: React.FC<StatsProps> = ( { state, cases, deaths, uf}) => {
 
   let letality = 0
   
@@ -51,20 +49,6 @@ const Stats: React.FC<StatsProps> = ( { state, cases, deaths, suspects, refuses,
                 <RiVirusFill />
               </div>
               Total de casos: {formatNumber(cases)}
-            </div>
-
-            <div className="info">
-              <div className="icon alert-icon">
-                <RiAlertFill />
-              </div>
-              Casos suspeitos: {formatNumber(suspects)}
-            </div>
-
-            <div className="info">
-              <div className="icon refuse-icon">
-                <RiCheckboxCircleFill />
-              </div>
-              Casos descartados: {formatNumber(refuses)}
             </div>
 
             <div className="info">

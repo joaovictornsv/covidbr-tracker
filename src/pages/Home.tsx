@@ -371,8 +371,6 @@ function Home() {
               state = {localData?.state}        
               cases = {localData?.cases}        
               deaths = {localData?.deaths}
-              refuses = {localData?.refuses}
-              suspects = {localData?.suspects}
               uf = {localData?.uf}    
             />
           )
