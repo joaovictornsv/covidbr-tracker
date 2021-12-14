@@ -19,11 +19,6 @@ function Home() {
     }
     setLocal(value)
   }
-  
-  console.log('local', local);
-  console.log('country', country);
-  console.log('localData', localData);
-  
 
   useEffect(() => {
     api.get(`${local}`).then(response => {
